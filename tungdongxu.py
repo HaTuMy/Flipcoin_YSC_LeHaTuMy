@@ -1,5 +1,5 @@
 import random
-
+# Cần cài đặt keyboard : pip install keyboard
 # Danh sách câu hỏi (20 câu hỏi ví dụ)
 questions = [
     "Trong thời gian gần đây, bạn có thường xuyên cảm thấy buồn bã hoặc chán nản không?",
@@ -34,11 +34,11 @@ def collect_answers(questions):
     print("\nNếu mặt Ngửa thì khách hàng trả lời thật")
     for question in questions:
         print(f"{question} (YES/NO): ", end="")
-        a = tung_dong_xu()
+        a = flip_coin()
         print("Đồng xu là mặt: ",a)
         if a == "Ngửa":
             answer = input("Nhập đáp án")
-        elif(tung_dong_xu() == "Ngửa"):
+        elif(flip_coin() == "Ngửa"):
             answer = "YES"
         else:
             answer = "NO"
